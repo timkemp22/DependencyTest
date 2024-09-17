@@ -43,6 +43,8 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
             excludes += "META-INF/gradle/incremental.annotation.processors"
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE-notice.md"
         }
     }
 }
@@ -63,6 +65,7 @@ dependencies {
 
 
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.bundles.testing)
+    androidTestImplementation(libs.androidx.junit.extension)
     androidTestImplementation(libs.androidx.espresso.core)
 }
