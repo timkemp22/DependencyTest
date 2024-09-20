@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dependencytest"
+    namespace = "com.bet365.dependencytesting"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.dependencytest"
+        applicationId = "com.bet365.dependencytesting"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -53,7 +53,7 @@ dependencies {
 
     implementation(libs.bundles.androidx)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.bundles.compose)
+
     implementation(libs.bundles.hilt)
     implementation(libs.bundles.kotlin)
     implementation(libs.bundles.google.play.libraries)
