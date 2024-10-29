@@ -106,6 +106,7 @@ androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTes
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
 androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidxTestRules" }
 androidx-test-extension-truth = { module = "androidx.test.ext:truth", version.ref = "androidxTestTruth" }
+androidx-benchmark-junit = {module = "androidx.benchmark:benchmark-junit4", version = "1.0.0"}
 
 google-truth = { module = "com.google.truth:truth", version.ref = "googleTruth" }
 
@@ -177,6 +178,7 @@ testing = [
     "androidx-test-runner",
     "androidx-test-rules",
     "androidx-test-extension-truth",
+    "androidx-benchmark-junit",
     "google-truth",
     "junit",
     "junit-vintage",
@@ -197,3 +199,6 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerializationPlugin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+#compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+

@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DependencyTest"
 include(":app")
- 
+include(":testlibrary")
