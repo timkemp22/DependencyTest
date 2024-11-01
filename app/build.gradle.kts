@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -53,15 +55,17 @@ dependencies {
 
     implementation(libs.bundles.androidx)
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
 
     implementation(libs.bundles.hilt)
     implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.google.play.libraries)
-    implementation(libs.okhttp)
-    implementation(libs.bundles.google.general)
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.messaging)
-    implementation(libs.card.scanning)
+    kapt(libs.hilt.compiler)
+//    implementation(libs.bundles.google.play.libraries)
+//    implementation(libs.okhttp)
+//    implementation(libs.bundles.google.general)
+//    implementation(libs.firebase.analytics)
+//    implementation(libs.firebase.messaging)
+//    implementation(libs.card.scanning)
 
 
     testImplementation(libs.junit)

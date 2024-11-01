@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "DependencyTest"
 include(":app")
 include(":testlibrary")
+include(":core:ui")
+include(":core:domain")
+include(":core:navigation")
