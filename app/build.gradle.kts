@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bet365.dependencytesting"
+    namespace = "com.testing.dependencytesting"
     compileSdk = 34
 
     defaultConfig {
