@@ -1,14 +1,14 @@
 [versions]
-agp = "8.5.2"
+agp = "8.7.2"
 kotlin = "1.9.24"
-coreKtx = "1.13.1"
+coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espresso = "3.6.1"
-lifecycleRuntimeKtx = "2.8.5"
-activityCompose = "1.9.2"
-composeBom = "2024.09.01"
-navigationCompose = "2.8.0"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.9.3"
+composeBom = "2024.11.00"
+navigationCompose = "2.8.4"
 hilt = "2.52"
 hiltExt = "1.2.0"
 hiltNavigation = "1.2.0"
@@ -18,7 +18,7 @@ playServicesAuth = "21.2.0"
 okhttp = "4.12.0"
 kotlinCoroutines = "1.8.1"
 appCompat = "1.7.0"
-lifecycleProcess = "2.8.5"
+lifecycleProcess = "2.8.7"
 preferences = "1.2.1"
 biometric = "1.1.0"
 browser = "1.8.0"
@@ -26,10 +26,10 @@ gson = "2.10.1"
 material = "1.12.0"
 flatbuffers = "1.12.0"
 integrity = "1.4.0"
-review = "2.0.1"
-reviewKtx = "2.0.1"
-firebaseMessaging = "24.0.1"
-firebaseAnalytics = "22.1.0"
+review = "2.0.2"
+reviewKtx = "2.0.2"
+firebaseMessaging = "24.1.0"
+firebaseAnalytics = "22.1.2"
 getkeepsafe = "1.4.5"
 cardScanning = "5.5.1"
 junitVintage = "5.7.2"
@@ -37,21 +37,29 @@ androidxTestCore = "1.6.1"
 androidxTestRunner = "1.6.2"
 androidxTestRules = "1.6.1"
 androidxTestTruth = "1.6.0"
-googleTruth = "1.1"
-constraintLayoutCompose = "1.0.1"
-androidxWorker = "2.9.1"
+googleTruth = "1.1.5"
+constraintLayoutCompose = "1.1.0"
+androidxWorker = "2.10.0"
 viewModelCompose = "2.8.7"
 espressoContrib = "3.6.1"
 espressoIntents = "3.6.1"
 espressoAccessibility = "3.6.1"
 espressoWeb = "3.6.1"
 idlingConcurrent = "3.6.1"
+androidxSplashScreen = "1.0.1"
+braze = "26.3.0"
+twilio = "5.2.0"
+androidUiAutomation = "2.3.0"
+hamcrest = "1.3"
 
 kotlinSerializationPlugin = "1.9.23"
 googleServicesPlugin = "4.4.2"
 composeCompilerPlugin = "1.7.0"
 
 [libraries]
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
 # Androidx General Libraries
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -61,6 +69,7 @@ androidx-preferences = { group = "androidx.preference", name = "preference-ktx",
 androidx-biometrics = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
 androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
 androidx-worker-runtime = { group = "androidx.work", name = "work-runtime", version.ref = "androidxWorker" }
+androidx-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxSplashScreen" }
 
 # Google Services Libraries
 google-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
@@ -86,7 +95,7 @@ androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "constraintLayoutCompose" }
-androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewModelCompose"}
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewModelCompose" }
 
 # Hilt Libraries
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
@@ -98,6 +107,10 @@ hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltEx
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 
+# Braze
+braze-sdk = { module = "com.braze:android-sdk-base", version.ref = "braze" }
+braze-ui = { module = "com.braze:android-sdk-ui", version.ref = "braze" }
+
 # Misc Libraries
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 kotlin-standard-library = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
@@ -106,6 +119,7 @@ kotlin-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutine
 card-scanning = { module = "io.card:android-sdk", version.ref = "cardScanning" }
 # This one is an aar bundled resource
 getkeepsafe-relinker = { module = "com.getkeepsafe.relinker:relinker", version.ref = "getkeepsafe" }
+twilio = {module = "com.twilio:voice-android", version.ref="twilio"}
 
 
 # Testing Libraries
@@ -113,9 +127,11 @@ androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTes
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
 androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidxTestRules" }
 androidx-test-extension-truth = { module = "androidx.test.ext:truth", version.ref = "androidxTestTruth" }
-androidx-benchmark-junit = { module = "androidx.benchmark:benchmark-junit4", version = "1.0.0" }
+androidx-benchmark-junit = { module = "androidx.benchmark:benchmark-junit4", version = "1.3.3" }
+androidx-ui-automator = {module = "androidx.test.uiautomator:uiautomator", version.ref = "androidUiAutomation"}
 
 google-truth = { module = "com.google.truth:truth", version.ref = "googleTruth" }
+hamcrest = {module = "org.hamcrest:hamcrest-integration", version.ref="hamcrest"}
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 junit-vintage = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junitVintage" }
@@ -138,7 +154,8 @@ androidx = [
     "androidx-lifecycle-process",
     "androidx-lifecycle-runtime-ktx",
     "androidx-appcompat",
-    "androidx-core-ktx"
+    "androidx-core-ktx",
+    "androidx-splashscreen"
 ]
 
 compose = [
@@ -182,6 +199,16 @@ kotlin = [
     "kotlin-reflect"
 ]
 
+firebase = [
+    "firebase-analytics",
+    "firebase-messaging"
+]
+
+braze = [
+    "braze-sdk",
+    "braze-ui"
+]
+
 testing = [
     "androidx-test-core",
     "androidx-test-runner",
@@ -198,7 +225,9 @@ testing = [
     "androidx-espresso-intents",
     "androidx-espresso-web",
     "androidx-espresso-idling-concurrent",
-    "androidx-espresso-idling-resource"
+    "androidx-espresso-idling-resource",
+    "hamcrest",
+    "androidx-ui-automator"
 ]
 
 [plugins]
@@ -210,4 +239,9 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 compose-compiler = { id = "org.jetbrains.compose", version.ref = "composeCompilerPlugin" }
+
+#Plugins defined in the project
+application = { id = "com.example.app", version = "unspecified" }
+core = { id = "com.example.coreModule", version = "unspecified" }
+compose = { id = "com.example.compose", version = "unspecified" }
 
