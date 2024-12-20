@@ -34,10 +34,14 @@ android {
 
 dependencies {
 
+    compileOnly(libs.android.lint.api)
+    compileOnly(libs.android.lint.checks)
+    compileOnly(libs.kotlin.standard.jdk7)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.google.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit.extension)
     androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.bundles.lintTesting)
 }
