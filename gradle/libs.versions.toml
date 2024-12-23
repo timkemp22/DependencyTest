@@ -63,11 +63,15 @@ googleServicesPlugin = "4.4.2"
 composeCompilerPlugin = "1.7.0"
 androidxBenchmarkPlugin = "1.3.3"
 kotlinJvmPlugin = "1.8.0"
+# Until we upgrade to Kotlin 2.x we have to keep this version to 4.4.0 as otherwise it conflicts
+kotlinDslPlugin = "4.4.0"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-standard-jdk7 = {module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref="kotlin"}
+
+gradle-api = {module = "com.android.tools.build:gradle-api", version.ref = "agp"}
 
 # Androidx General Libraries
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -267,9 +271,10 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 compose-compiler = { id = "org.jetbrains.compose", version.ref = "composeCompilerPlugin" }
-kotlin-dsl = {id = "org.gradle.kotlin.kotlin-dsl", version = "4.4.0"}
+kotlin-dsl = {id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlinDslPlugin"}
 android-benchmark = {id = "androidx.benchmark", version.ref = "androidxBenchmarkPlugin"}
 kotlin-jvm = {id = "org.jetbrains.kotlin.jvm", version.ref="kotlinJvmPlugin"}
+kotlin-gradle =  {id="org.jetbrains.kotlin", version.ref="kotlin"}
 
 #Plugins defined in the project
 application = { id = "com.example.app", version = "unspecified" }

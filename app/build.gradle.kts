@@ -10,3 +10,16 @@ plugins {
 android {
     namespace = "com.testing.dependencytesting"
 }
+
+dependencies {
+    implementation(libs.twilio){
+        artifact {
+            type = "aar"
+        }
+    }
+    implementation(libs.getkeepsafe.relinker){
+        artifact {
+            type = "aar"
+        }
+    }
+}
