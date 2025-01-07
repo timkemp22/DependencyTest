@@ -21,6 +21,7 @@ internal fun Project.configureAddModule(
             add("implementation", versionCatalog.bundle("braze"))
             add("implementation", versionCatalog.bundle("google-play-libraries"))
             add("implementation", versionCatalog.library("androidx-worker-runtime"))
+            add("implementation", versionCatalog.bundle("lint"))
         }
     }
 }
