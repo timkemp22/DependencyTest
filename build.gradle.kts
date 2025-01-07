@@ -10,4 +10,5 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.android.benchmark) apply false
     alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.kotlin.dsl) apply false
 }
