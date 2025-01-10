@@ -22,4 +22,6 @@ dependencies {
             type = "aar"
         }
     }
+
+    implementation(libs.kotlin.standard.jdk7)
 }

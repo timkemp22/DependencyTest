@@ -274,7 +274,7 @@ compose-compiler = { id = "org.jetbrains.compose", version.ref = "composeCompile
 kotlin-dsl = {id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlinDslPlugin"}
 android-benchmark = {id = "androidx.benchmark", version.ref = "androidxBenchmarkPlugin"}
 kotlin-jvm = {id = "org.jetbrains.kotlin.jvm", version.ref="kotlinJvmPlugin"}
-kotlin-gradle =  {id="org.jetbrains.kotlin", version.ref="kotlin"}
+android-lint =  {id="com.android.lint", version.ref="agp"}
 
 #Plugins defined in the project
 application = { id = "com.example.app", version = "unspecified" }
