@@ -17,7 +17,7 @@ internal fun CommonExtension<*, *, *, *, *, *>.excludeResourcesFromPackaging() {
                 "META-INF/gradle/incremental.annotation.processors",
                 // This doesn't feel like the right solution, but resolves an issue with the manifest
                 // trying to be packaged twice causing a conflict of overriding.
-                "AndroidManifest.xml"
+                "AndroidManifest.xml",
             )
         }
     }
