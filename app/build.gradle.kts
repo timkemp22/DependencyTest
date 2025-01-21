@@ -24,4 +24,6 @@ dependencies {
     }
 
     implementation(libs.kotlin.standard.jdk7)
+
+    implementation(libs.bundles.usLocation)
 }

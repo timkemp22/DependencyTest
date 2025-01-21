@@ -58,6 +58,9 @@ easymock = "4.2"
 mockito = "3.0.0"
 smali = "2.2.4"
 
+radar = "3.18.4"
+xpoint = "5.2.4"
+
 kotlinSerializationPlugin = "1.9.23"
 googleServicesPlugin = "4.4.2"
 composeCompilerPlugin = "1.7.0"
@@ -172,6 +175,9 @@ easymock = {module = "org.easymock:easymock", version.ref="easymock"}
 mockito = {module = "org.mockito:mockito-core", version.ref="mockito"}
 smali = {module = "org.smali:dexlib2", version.ref ="smali"}
 
+radar-sdk = { module = "io.radar:sdk", version.ref = "radar" }
+xpoint-sdk-android = { module = "tech.xpoint:sdk-android", version.ref = "xpoint" }
+
 [bundles]
 androidx = [
     "androidx-biometrics",
@@ -268,6 +274,11 @@ lintTesting = [
     "smali",
     "android-test-utils",
     "android-lint-testing"
+]
+
+usLocation = [
+    "xpoint-sdk-android",
+    "radar-sdk"
 ]
 
 [plugins]
