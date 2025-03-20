@@ -15,14 +15,11 @@ internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*,
             compose = true
         }
 
-        composeOptions {
-            kotlinCompilerExtensionVersion = "1.5.14"
-        }
         dependencies {
             val bom = versionCatalog.library("androidx-compose-bom")
             add("implementation", platform(bom))
             add("implementation", versionCatalog.bundle("compose"))
-            add("kapt", versionCatalog.library("hilt-compiler"))
+            add("ksp", versionCatalog.library("hilt-compiler"))
             add("implementation", versionCatalog.bundle("androidx"))
             add("implementation", versionCatalog.bundle("hilt"))
 

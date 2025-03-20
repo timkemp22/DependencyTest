@@ -14,7 +14,6 @@ internal class AppModuleConventionPlugin: Plugin<Project> {
             with(plugins){
                 apply("com.android.application")
                 apply("kotlin-android")
-                apply("kotlin-kapt")
                 apply("com.google.dagger.hilt.android")
                 apply("org.jetbrains.kotlin.plugin.compose")
             }
