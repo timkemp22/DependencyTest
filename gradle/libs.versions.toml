@@ -1,14 +1,14 @@
 [versions]
-agp = "8.7.3"
-kotlin = "1.9.24"
+agp = "8.8.0"
+kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espresso = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.11.00"
-navigationCompose = "2.8.4"
+activityCompose = "1.10.1"
+composeBom = "2025.03.00"
+navigationCompose = "2.8.9"
 hilt = "2.52"
 hiltExt = "1.2.0"
 hiltNavigation = "1.2.0"
@@ -38,7 +38,7 @@ androidxTestRunner = "1.6.2"
 androidxTestRules = "1.6.1"
 androidxTestTruth = "1.6.0"
 googleTruth = "1.1.5"
-constraintLayoutCompose = "1.1.0"
+constraintLayoutCompose = "1.1.1"
 androidxWorker = "2.10.0"
 viewModelCompose = "2.8.7"
 espressoContrib = "3.6.1"
@@ -289,7 +289,7 @@ serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref 
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServicesPlugin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-compose-compiler = { id = "org.jetbrains.compose", version.ref = "composeCompilerPlugin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-dsl = {id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlinDslPlugin"}
 android-benchmark = {id = "androidx.benchmark", version.ref = "androidxBenchmarkPlugin"}
 kotlin-jvm = {id = "org.jetbrains.kotlin.jvm", version.ref="kotlinJvmPlugin"}

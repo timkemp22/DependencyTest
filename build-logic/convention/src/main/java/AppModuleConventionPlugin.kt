@@ -16,6 +16,7 @@ internal class AppModuleConventionPlugin: Plugin<Project> {
                 apply("kotlin-android")
                 apply("kotlin-kapt")
                 apply("com.google.dagger.hilt.android")
+                apply("org.jetbrains.kotlin.plugin.compose")
             }
             extensions.configure<ApplicationExtension>(){
                 excludeResourcesFromPackaging()
