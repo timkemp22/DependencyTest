@@ -10,6 +10,9 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://downloads.xpoint.tech/nexus/")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -17,6 +20,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://downloads.xpoint.tech/nexus/")
+        }
     }
 }
 
